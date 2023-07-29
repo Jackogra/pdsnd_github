@@ -2,9 +2,11 @@ import time
 import pandas as pd
 import numpy as np
 
+
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
+
 
 def get_filters():
     """
@@ -20,11 +22,12 @@ def get_filters():
     
     
     while True:
-        city = input('Would You like me to analyze data from CHICAGO, NEW YORK CITY or WASHINGTON? - ').lower()
+        city = input('Would You like me to analyze data from Chicago, New York City or Washington? - ').lower()
         if city not in CITY_DATA:
             print('\nI\'m sorry but You entered incorrect city name. Let\'s try again :)\n')
         else:
             break
+
 
     # get user input for month (all, january, february, ... , june)
     while True:
@@ -34,6 +37,7 @@ def get_filters():
             print('\nYou entered incorrect month name. Let\'s try again :)')
         else:
             break
+
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
@@ -203,7 +207,6 @@ def display_data(df):
         start_loc += 5
         view_data = input("\nWould You like to see next 5 rows of data?: - ").lower()
                     
-
 
 def main():
     while True:
